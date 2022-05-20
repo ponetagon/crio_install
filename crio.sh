@@ -40,8 +40,6 @@ sudo systemctl daemon-reload
 
 sudo systemctl enable crio --now crio
 
-sudo systemctl status crio
-
 sudo apt install cri-tools -y 
 
 crictl version

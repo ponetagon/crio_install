@@ -1,6 +1,6 @@
 OS=xUbuntu_20.04
 VERSION=1.23
-
+read -p "Enter k8s version: " k8s_version
 sudo swapoff -a
 sudo rm /swap.img
 sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab
@@ -53,6 +53,6 @@ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://a
 
 
 sudo apt-get update
-sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-get install -y kubelet=$k8s_version.0-00 kubeadm=$k8s_version.0-00 kubectl=$k8s_version.0-00
 sudo apt-mark hold kubelet kubeadm kubectl
 

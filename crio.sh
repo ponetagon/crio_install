@@ -1,5 +1,5 @@
 OS=xUbuntu_20.04
-VERSION=1.23
+read -p "Enter crio version: " VERSION
 read -p "Enter k8s version: " k8s_version
 sudo swapoff -a
 sudo rm /swap.img
